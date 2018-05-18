@@ -24,7 +24,12 @@ export class HeroesComponent implements OnInit {
     alert("Hello, Bro");
   }
 
-  onConsoleLog(str: string): void {
-    console.log("I'am working", str);
+  onConsoleLog(): void {
+    console.log("I'am working", this.selectedHero);
+  }
+
+  deleteBlock(): void {
+    this.selectedHero = null;
+    console.log("delete selectedHero", this.heroes);
   }
 }
