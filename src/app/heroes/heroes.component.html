@@ -1,11 +1,14 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"  (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.name}}</span> {{hero.id}}
   </li>
 </ul>
-
+<div>
+  <button class="button" (click)="onClicked()">Click me, bro!</button>
+  <button class="button" (click)="onConsoleLog('Roman Nemchinov')">Console log, bro!</button>
+</div>
 <div *ngIf="selectedHero">
   <h2>{{ selectedHero.name | lowercase }} Details</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
